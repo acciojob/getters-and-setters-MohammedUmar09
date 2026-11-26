@@ -8,24 +8,30 @@ class Person {
 		this.age = age;
 	}
 
-	getName(){
+	get getName(){
 		return this.name;
 	}
-	setName(name){
+	set setName(name){
 		this.name = name;
 	}
 }
 
 class Student extends Person {
-	super(name, age);
-	function study(){
+	constructor(name, age){
+		super(name, age);
+	}
+	
+	study(){
 		console.log(`${name} is studying`);
 	}
 }
 
 class Teacher extends Person {
-	super(name, age);
-	function teach(){
+	constructor(name, age){
+		super(name, age);
+	}
+	
+	teach(){
 		console.log(`${name} is teaching`);
 	}
 }
